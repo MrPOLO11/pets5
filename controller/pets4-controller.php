@@ -26,4 +26,12 @@ class Controller
         $view = new Template();
         echo $view->render('views/results.html');
     }
+
+    public function petDetail() {
+        $pets = $GLOBALS['db']->getPets();
+        $this->_f3->set('pets', $pets);
+
+        $template = new Template();
+        echo $template->render('views/view-Pets.html');
+    }
 }

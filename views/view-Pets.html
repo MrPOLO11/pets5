@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GRC Students</title>
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+</head>
+<body>
+
+<div class="container">
+
+    <h1>GRC Pets List</h1>
+
+    <ol>
+        <repeat group="{{ @pets }}" value="{{ @pet }}">
+            <li>{{ @pet['pet_id'] }} - {{ @pet['name'] }}, {{ @pet['color'] }}, {{ @pet['type'] }}</li>
+        </repeat>
+    </ol>
+</div>
+
+</body>
+</html>

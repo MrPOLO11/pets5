@@ -14,6 +14,7 @@ session_start();
 //Instantiate F3
 $f3 = Base::Instance();
 
+$db = new Database();
 //Instantiate controller object
 $controller = new Controller($f3);
 
@@ -96,6 +97,11 @@ $f3->route("GET|POST /order2", function($f3) {
 
 $f3->route("GET|POST /results", function() {
     $GLOBALS['controller']->result();
+});
+
+//Define a view route
+$f3->route("GET /view", function (){
+    $GLOBALS['controller']->petDetail();
 });
 
 //Run f3
