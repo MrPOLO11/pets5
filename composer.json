@@ -1,0 +1,19 @@
+{
+  "name": "mrivera/328/pets5",
+  "authors": [
+    {
+      "name": "Marcos Rivera",
+      "email": "mrivera22@mail.greenriver.edu"
+    },
+    {
+      "name": "Evgenii Mishkin",
+      "email": "emishkin@mail.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  },
+  "autoload": {
+    "classmap": ["classes/", "controller/"]
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pets 2</title>
+</head>
+<body>
+<form method="post" action="#">
+    <label for="name">Enter a pet name</label>
+    <input class="form-control" type="text" id="name" name="name" value="{{@SESSION.animal->getName()}}"><br>
+    <label for="color">Select an color</label>
+    <select class="form-control" id="color" name="color">
+     <!--   <option value="none">Select a color</option>
+        <option value="white">White</option>
+        <option value="black">Black</option>
+        <option value="pink">Pink</option>-->
+
+<!--        <option> Select a color </option>-->
+        <repeat group="{{ @colors }}" value="{{ @colorOption }}"
+            <check if="@colorOption==@SESSION.animal->getColor()">
+                selected
+            </check>
+            ><option>{{ @colorOption }}</option>
+        </repeat>
+    </select>
+    <button type="submit">Next>></button>
+</form>
+</body>
+</html>
